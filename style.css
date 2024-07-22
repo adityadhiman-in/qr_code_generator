@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: "Exo 2", sans-serif;
+    color: var(--primary-color);
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-color);
+}
+
+:root {
+    --primary-color: #412767;
+    --secondary-color: #B692C2;
+    --tertiary-color: #E3A5C7;
+    --quaternary-color: #fff8f7;
+}
+.container{
+    width: 100%;
+    max-width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--quaternary-color);
+    padding: 40px;
+    border-radius: 8px;
+}
+.container p{
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+.container input{
+    width: 100%;
+    height: 50px;
+    border: 1px solid var(--tertiary-color);
+    padding: 10px;
+    outline: 0;
+    margin: 10px 0 20px;
+    border-radius: 5px;
+    background: var(--quaternary-color);
+}
+
+.container button{
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--quaternary-color);
+    width: 100%;
+    height: 50px;
+    border: 1px solid var(--primary-color);
+    padding: 10px;
+    outline: 0;
+    margin: 10px 0 20px;
+    border-radius: 5px;
+    background: var(--primary-color);
+    cursor: pointer;
+}
+#qrCodeContainer{
+    width: 200px;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 2s;
+}
+
+#qrCodeContainer img{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+#qrCodeContainer.showImg{
+    max-height: 300px;
+    margin: 10px auto;
+    border-radius: 1px solid var(--quaternary-color);
+}
+.empty{
+    animation: shake .2s linear 1;
+}
+
+@keyframes shake {
+    0%{
+        transform: translateX(0);
+    } 25%{
+        transform: translateX(-4px);
+    } 50%{
+        transform: translateX(0);
+    } 75%{
+        transform: translateX(-4px);
+    } 100%{
+        transform: translateX(0);
+    }
+}
